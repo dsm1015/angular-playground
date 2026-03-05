@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {MessagesComponent} from "./messages/messages.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MessagesComponent, RouterLink, RouterLinkActive, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular-playground';
+  title = 'Tour of Heroes';
 }
